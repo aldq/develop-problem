@@ -20,3 +20,16 @@ def get_host_ip():
 if __name__ == '__main__':
     print(get_host_ip())
 ```
+
+
+```markdown
+
+$sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
+socket_connect($sock, "8.8.8.8", 53);
+socket_getsockname($sock, $name); // $name passed by reference
+socket_close($sock);
+// This is the local machine's external IP address
+$localAddr = $name;
+print($localAddr);
+
+```
